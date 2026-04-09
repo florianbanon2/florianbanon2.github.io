@@ -1,4 +1,4 @@
-/* Thème professionnel et minimaliste pour Victor Gaya */
+/* Thème professionnel et minimaliste pour Florian Banon */
 :root {
   --main-bg: #f7fafd;
   --main-color: #222;
@@ -30,7 +30,7 @@ header img {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center top;
   border: 2.5px solid var(--border);
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
