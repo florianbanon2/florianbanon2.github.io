@@ -182,6 +182,26 @@ a:hover {
   font-size: 0.9em;
   color: #4a5a6a;
 }
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.project-links a {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.project-links a:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
 .card--highlight {
   border-left: 4px solid var(--accent);
 }
