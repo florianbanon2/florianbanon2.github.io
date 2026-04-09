@@ -29,8 +29,8 @@ header img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  object-fit: none;
-  object-position: center 15%;
+  object-fit: cover;
+  object-position: center 20%;
   border: 2.5px solid var(--border);
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
