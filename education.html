@@ -12,6 +12,7 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
     <a href="education.html">Education & Experience</a>
     <a href="Florian_Banon_CV.pdf" target="_blank">CV</a>
     <a href="contact.html">Contact</a>
@@ -20,21 +21,25 @@
     <section class="card">
       <h2>Experience</h2>
       <div class="edu-block">
-        <h3>Research Engineering Intern – Machine/Deep Learning for SAR Imagery Processing</h3>
-        <p>National University of Singapore, Singapore &mdash; Jan 2026 – Present</p>
+        <h3>Research Engineering Intern – Deep Learning for Ionospheric Scintillation Mitigation in SAR Imagery</h3>
+        <p>National University of Singapore (NUS), Singapore &mdash; Jan 2026 – Present</p>
         <ul>
-          <li>Developed a reproducible deep-learning pipeline in Python and PyTorch for data preparation, model training, evaluation, and experiment management.</li>
-          <li>Designed and compared real-valued and complex-valued neural network approaches for learning from ionosphere-affected radar signal representations.</li>
-          <li>Scaled the workflow to HPC environments to support larger experiments, with the long-term goal of improving the modelling, characterization, and mitigation of ionospheric effects in low-frequency SAR systems.</li>
+          <li>Developed the deep-learning component of <strong>BubbleNet</strong>, a physics-informed research project restoring L-band SAR imagery (e.g. ALOS/PALSAR) degraded by ionospheric scintillation — targeting a submission to ISAP 2026.</li>
+          <li>Designed and adapted a <strong>complex-valued neural network (CVNN)</strong> predicting the scintillation indices S4 (intensity) and σφ (phase) from complex SAR signal representations, extending it from single-output to multi-input, dual-output regression.</li>
+          <li>Built a physics-informed pipeline coupling deep learning with a phase-screen model (Carrano et al., 2012): CVNN index prediction → analytic regeneration of the ionospheric transfer function → U-Net image denoiser, validating each stage against synthetic physical ground truth.</li>
+          <li>Engineered the data and training stack in PyTorch (native complex tensors): refactored complex-valued HDF5 inputs, built a precompute step caching ~5 GB in RAM for ~5× faster training, and extended losses and per-output metrics (R², RMSE, MAE); ran experiments on a PBS HPC cluster (CPU/GPU, A40).</li>
+          <li>Reached R² = 0.980 (RMSE = 0.020) on S4 prediction, outperforming random-forest and real-valued network baselines; authored the project's technical documentation and coordinated the data interface with the physics team.</li>
         </ul>
       </div>
       <div class="edu-block">
-        <h3>Dynamic Satellite Database Development Intern</h3>
-        <p>ONERA, Palaiseau, France &mdash; Jun 2024 – Aug 2024</p>
+        <h3>Software &amp; Data Engineering Intern – Dynamic Satellite Database for Space Surveillance</h3>
+        <p>ONERA (French Aerospace Lab), Palaiseau, France &mdash; Jun 2024 – Aug 2024</p>
         <ul>
-          <li>Utilized Python and MongoDB to build and optimize the database, implementing data pipelines for satellite tracking and analysis.</li>
-          <li>Verified data integrity by developing scripts to detect and remove duplicates.</li>
-          <li>Streamlined satellite cataloguing processes and improved consistency across datasets.</li>
+          <li>Built <strong>OBELIX</strong>, a Python ETL (extract–transform–load) pipeline supporting ONERA's space-surveillance work, aggregating data on satellites and orbiting objects from several heterogeneous sources: Gunter's Space Page (web scraping with BeautifulSoup), the UCS satellite catalogue, Two-Line Element (TLE) sets from Space-Track and McCants, and DORIS (CNES) COSPAR identifiers.</li>
+          <li>Processed the TLE sets with Skyfield to derive orbital parameters and classify each object's orbit using ESA terminology (LEO, MEO, GEO, SSO, GTO, HEO, VLEO…), including sun-synchronous-orbit detection via J2 nodal precession and conversion of NORAD Alpha-5 identifiers.</li>
+          <li>Centralised the data in a MongoDB database built on a hub-and-spoke model around a pivot <em>Satellite</em> collection (keyed by NORAD / COSPAR), with deduplication and integrity checks that flag identifier conflicts and retain only the most recent TLE per object.</li>
+          <li>Exposed the catalogue through a FastAPI REST API offering list and per-field queries, whitelisted field updates, and a custom query language with comparison operators, sorting and result limits translated into MongoDB queries.</li>
+          <li>Documented the schema, scripts and procedures so the system could be maintained and extended by the team.</li>
         </ul>
       </div>
     </section>
@@ -42,12 +47,12 @@
     <section class="card">
       <h2>Education</h2>
       <div class="edu-block">
-        <h3>Master of Engineering – Aerospace and Computer Science Engineering</h3>
-        <p>Concordia University, Montreal, QC &mdash; 2024–2026</p>
+        <h3>Master of Engineering – Aerospace Engineering</h3>
+        <p>Concordia University, Montreal, QC &mdash; 2024–2026 &middot; Specialisation: Space, Launchers &amp; Satellites</p>
       </div>
       <div class="edu-block">
-        <h3>Master of Engineering – Aerospace and Computer Science Engineering</h3>
-        <p>Institut Polytechnique des Sciences Avancées (IPSA), Paris, France &mdash; 2022–2026</p>
+        <h3>Aerospace Engineering Degree (Diplôme d'Ingénieur Aérospatial)</h3>
+        <p>Institut Polytechnique des Sciences Avancées (IPSA), Paris, France &mdash; 2022–2026 &middot; Specialisation: Space, Launchers &amp; Satellites</p>
       </div>
       <div class="edu-block">
         <h3>Exchange Semester</h3>
@@ -62,8 +67,12 @@
         <p>Python &bull; MATLAB &bull; C++ &bull; SQL &bull; R</p>
       </div>
       <div class="edu-block">
-        <h3>Technical Skills</h3>
-        <p>Machine Learning &bull; Deep Learning &bull; AI &bull; PyTorch &bull; OpenCV &bull; SAR Imagery &bull; Git &bull; Data Engineering</p>
+        <h3>Space &amp; Mission Analysis</h3>
+        <p>Orbital Mechanics &bull; Astrodynamics &bull; Orbit Determination &bull; STK Trajectory Simulation &bull; Interplanetary Mission Design (patched-conic, ΔV &amp; mass budgets) &bull; Runge-Kutta Propagation &bull; Monte Carlo Uncertainty Propagation</p>
+      </div>
+      <div class="edu-block">
+        <h3>Machine Learning &amp; Data</h3>
+        <p>Machine Learning &bull; Deep Learning &bull; PyTorch &bull; OpenCV &bull; SAR Imagery &bull; Complex-valued Neural Networks &bull; HPC &bull; Data Engineering &bull; Git</p>
       </div>
       <div class="edu-block">
         <h3>Software</h3>

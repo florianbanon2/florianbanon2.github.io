@@ -12,24 +12,25 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
     <a href="education.html">Education & Experience</a>
     <a href="Florian_Banon_CV.pdf" target="_blank">CV</a>
     <a href="contact.html">Contact</a>
   </nav>
   <main>
     <section class="card">
-      <h2>Relevant Aerospace and Computer Science Projects</h2>
+      <h2>Relevant Space &amp; Aerospace Projects</h2>
       <ul class="pub-list">
         <li class="pub-item">
           <div class="pub-title">Dynamical Simulation of the Asteroid Population</div>
           <div class="pub-meta">IPSA, Paris, France</div>
           <ul>
-            <li>Modelled the motion of asteroid 2007 VW266 in retrograde resonance with Jupiter using Python.</li>
-            <li>Analysed asteroid perturbations and approximated orbital elements.</li>
-            <li>Simulated long-term asteroid trajectories to predict stability and future interactions with Jupiter.</li>
+            <li>Modelled the motion of asteroid 2007 VW266 in 13/14 retrograde mean-motion resonance with Jupiter, deriving the equations of motion from Keplerian to Cartesian coordinates with Sun and Jupiter perturbations.</li>
+            <li>Implemented the orbital propagation in Python with a 4th-order Runge-Kutta integrator, solving Kepler's equation via Newton-Raphson.</li>
+            <li>Ran Monte Carlo uncertainty propagation (orbit clones within the measurement error bounds) over 100 and 10,000 years to study the evolution of the orbital elements (a, e, i) and long-term stability, cross-validated against the Connors &amp; Wiegert reference paper.</li>
           </ul>
           <div class="project-links">
-            <a href="https://onedrive.live.com/?id=%2Fpersonal%2Fb803596470a0f552%2FDocuments%2FProjects%2FModeling%20the%20Asteroid%20Population%20in%20the%20Solar%20System%2Epdf&parent=%2Fpersonal%2Fb803596470a0f552%2FDocuments%2FProjects" target="_blank">📄 Report</a>
+            <a href="https://1drv.ms/b/c/b803596470a0f552/IQA_XoIXzWnHR538guAIaEc9AYbpMxpJNCGoC0bJpB3zJEY?e=lKFk3f" target="_blank">📄 Report</a>
             <a href="https://www.youtube.com/watch?v=wiN4qRan_JY" target="_blank">▶ Trajectory Plot (Video)</a>
           </div>
         </li>
@@ -37,9 +38,9 @@
           <div class="pub-title">Neptune Flyby Mission</div>
           <div class="pub-meta">IPSA, Paris, France</div>
           <ul>
-            <li>Calculated the trajectory and cost of a Neptune flyby mission, optimizing delta-V by integrating Jupiter flybys to minimize fuel consumption.</li>
-            <li>Used NASA's trajectory browser to plan interplanetary transfers and simulated orbital manoeuvres with focus on hyperbolic escape and gravity assists.</li>
-            <li>Delivered a full mission analysis covering orbit insertion, hyperbolic escape, and planetary encounter phases using STK.</li>
+            <li>Designed an Earth–Jupiter–Neptune flyby trajectory with the patched-conic method and a single Jupiter gravity assist, using the NASA Trajectory Browser solution as the design baseline.</li>
+            <li>Analytically computed each conic segment — circular parking orbit, hyperbolic Earth escape (≈ 7.92 km/s), Earth→Jupiter transfer ellipse, Jupiter gravity-assist geometry (≈ 11.6 km/s free heliocentric gain), and Jupiter→Neptune hyperbolic transfer.</li>
+            <li>Built the ΔV and mass budgets (Tsiolkovsky rocket equation) and reproduced the full trajectory in an STK12 simulation, with a transit time consistent with the NASA reference (~7 years).</li>
           </ul>
         </li>
       </ul>
@@ -53,9 +54,12 @@
           <ul>
             <li>Designed injectors, combustion chamber and nozzle based on the F-1 engine using CATIA.</li>
             <li>Established optimal mass flow rates for the fuel and oxidizer.</li>
-            <li>Simulated non-reacting flows, combustion and supersonic gas ejection using STAR-CCM+.</li>
+            <li>Simulated non-reacting flows, combustion and supersonic gas ejection using ANSYS and STAR-CCM+.</li>
             <li>Studied mixing, temperature and combustion pressure; discussed geometry improvements to address pressure drops in the injector.</li>
           </ul>
+          <div class="project-links">
+            <a href="https://1drv.ms/b/c/b803596470a0f552/IQAfSNKV7TDwTbNd3g7TjEPeAaJJFmRHK-WXyoq3pufy6bw?e=JHX7fa" target="_blank">📄 Report</a>
+          </div>
         </li>
         <li class="pub-item">
           <div class="pub-title">Aerodynamic Optimization of a Fixed-Wing UAV</div>
@@ -65,6 +69,9 @@
             <li>Conducted airfoil analysis using XFoil and performed 3D modelling in OpenVSP, integrating new root and tip airfoils with span extension and washout twist.</li>
             <li>Applied the Vortex Lattice Method (VLM) for aerodynamic performance estimation.</li>
           </ul>
+          <div class="project-links">
+            <a href="https://1drv.ms/b/c/b803596470a0f552/IQCZqXGtis7tTaZbr4GHRHRGAdbbUXhIYMLfw_KmW5W-IqY?e=mInupx" target="_blank">📄 Report</a>
+          </div>
         </li>
         <li class="pub-item">
           <div class="pub-title">Design and Test of a Turbine Blade using STAR-CCM+</div>
@@ -74,6 +81,9 @@
             <li>Established the mesh and discussed simulation stability and accuracy.</li>
             <li>Modelled flow in the cascade; analysed temperature, pressure profile and isentropic Mach number, with discussion of losses and stall risk.</li>
           </ul>
+          <div class="project-links">
+            <a href="https://1drv.ms/b/c/b803596470a0f552/IQDXZMH1UwcPSLJDom6ROhh8AY0GUslEO8FLPgOS0xMflPk?e=ygbBvx" target="_blank">📄 Report</a>
+          </div>
         </li>
       </ul>
       <p style="margin-top: 16px;">More projects available on <a href="https://onedrive.live.com/?id=%2Fpersonal%2Fb803596470a0f552%2FDocuments%2FProjects&parent=%2Fpersonal%2Fb803596470a0f552%2FDocuments" target="_blank">OneDrive</a>.</p>

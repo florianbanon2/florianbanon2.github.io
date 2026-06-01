@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victor Gaya – Publications</title>
+  <title>Publications – Florian Banon</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,9 +11,10 @@
   <script src="header.js"></script>
   <nav>
     <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
     <a href="publications.html">Publications</a>
     <a href="education.html">Education & Experience</a>
-    <a href="resume_VG.pdf" target="_blank">CV</a>
+    <a href="Florian_Banon_CV.pdf" target="_blank">CV</a>
     <a href="contact.html">Contact</a>
   </nav>
   <main>
@@ -21,22 +22,30 @@
       <h2>Publications</h2>
       <ul class="pub-list">
         <li class="pub-item">
-          <div class="pub-title"><a href="https://theses.hal.science/tel-05480014" target="_blank">Deep learning for SAR image enhancement: multi-modal fusion and interferometric denoising</a></div>
-          <div class="pub-meta"><strong>Gaya, V.</strong> — PhD thesis, <em>Institut Polytechnique de Paris, Télécom Paris</em>, 2025.</div>
-        </li>
-        <li class="pub-item">
-          <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10642047" target="_blank">Self-Supervised Learning of Multi-Modal Cooperation for SAR Despeckling</a></div>
-          <div class="pub-meta"><strong>Gaya, V.</strong>, et al. — Conference, <em>IGARSS</em>, 2024.</div>
-        </li>
-        <li class="pub-item">
-          <div class="pub-title"><a href="https://telecom-paris.hal.science/hal-04144686v1" target="_blank">Débruitage multi-modal d'images radar à synthèse d'ouverture par apprentissage profond auto-supervisé</a></div>
-          <div class="pub-meta"><strong>Gaya, V.</strong>, et al. — Conference, <em>GRETSI</em>, 2023.</div>
+          <div class="current-position__topics" style="margin-bottom: 8px;">
+            <span class="topic-tag">In preparation</span>
+          </div>
+          <div class="pub-title">Physics-Informed Complex-Valued Neural Networks for Ionospheric Scintillation Mitigation in L-band SAR Imagery</div>
+          <div class="pub-meta"><strong>Banon, F.</strong>, Dell'aiera, M., et al. &mdash; International Symposium on Antennas and Propagation (<em>ISAP</em>), 2026.</div>
+          <p style="margin: 10px 0 8px 0; font-size: 0.96em;">
+            A physics-informed deep-learning approach to restore L-band SAR imagery (e.g. ALOS/PALSAR) degraded by ionospheric scintillation. A complex-valued neural network (CVNN) predicts the scintillation indices S4 and σφ from complex SAR data; a phase-screen physical model (Carrano et al., 2012) then regenerates the ionospheric transfer function, which guides a U-Net denoiser reconstructing the clean image. Training and stage-by-stage validation use a synthetic dataset with full physical ground truth.
+          </p>
+          <div class="current-position__topics">
+            <span class="topic-tag">Complex-valued Neural Networks</span>
+            <span class="topic-tag">Physics-Informed ML</span>
+            <span class="topic-tag">U-Net</span>
+            <span class="topic-tag">SAR Imagery</span>
+            <span class="topic-tag">Ionospheric Scintillation</span>
+          </div>
+          <p class="pub-meta" style="margin-top: 10px; font-style: italic;">
+            Draft entry &mdash; confirm the final title, author list/order and venue dates, and add the paper/DOI link once submitted.
+          </p>
         </li>
       </ul>
     </section>
   </main>
   <footer>
-    © 2025 Victor Gaya – <a href="https://github.com/goldentrex">GitHub</a>
+    &copy; 2026 Florian Banon
   </footer>
 </body>
 </html>
