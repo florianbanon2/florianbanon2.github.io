@@ -222,6 +222,12 @@ a:hover {
   color: #4a5a6a;
   margin-bottom: 14px;
 }
+.current-position__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
 .current-position__topics {
   display: flex;
   flex-wrap: wrap;
@@ -269,9 +275,56 @@ a:hover {
   font-size: 0.85em;
   color: #4a5a6a;
 }
+.edu-block--logo {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 22px 0;
+}
+.edu-block__body {
+  flex: 1;
+  min-width: 0;
+}
+.edu-block__body > :first-child {
+  margin-top: 0;
+}
+.edu-block__body > :last-child {
+  margin-bottom: 0;
+}
+.org-logo {
+  flex-shrink: 0;
+  width: 150px;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.org-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
 @media (max-width: 600px) {
   .quick-links {
     grid-template-columns: 1fr;
+  }
+  .edu-block--logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .current-position__header {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .org-logo {
+    width: 130px;
+    height: 56px;
   }
 }
 @media (max-width: 600px) {

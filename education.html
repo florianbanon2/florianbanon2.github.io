@@ -20,43 +20,71 @@
   <main>
     <section class="card">
       <h2>Experience</h2>
-      <div class="edu-block">
-        <h3>Research Engineering Intern – Deep Learning for Ionospheric Scintillation Mitigation in SAR Imagery</h3>
-        <p>National University of Singapore (NUS), Singapore &mdash; Jan 2026 – Present</p>
-        <ul>
-          <li>Developed the deep-learning component of <strong>BubbleNet</strong>, a physics-informed research project restoring L-band SAR imagery (e.g. ALOS/PALSAR) degraded by ionospheric scintillation — targeting a submission to ISAP 2026.</li>
-          <li>Designed and adapted a <strong>complex-valued neural network (CVNN)</strong> predicting the scintillation indices S4 (intensity) and σφ (phase) from complex SAR signal representations, extending it from single-output to multi-input, dual-output regression.</li>
-          <li>Built a physics-informed pipeline coupling deep learning with a phase-screen model (Carrano et al., 2012): CVNN index prediction → analytic regeneration of the ionospheric transfer function → U-Net image denoiser, validating each stage against synthetic physical ground truth.</li>
-          <li>Engineered the data and training stack in PyTorch (native complex tensors): refactored complex-valued HDF5 inputs, built a precompute step caching ~5 GB in RAM for ~5× faster training, and extended losses and per-output metrics (R², RMSE, MAE); ran experiments on a PBS HPC cluster (CPU/GPU, A40).</li>
-          <li>Reached R² = 0.980 (RMSE = 0.020) on S4 prediction, outperforming random-forest and real-valued network baselines; authored the project's technical documentation and coordinated the data interface with the physics team.</li>
-        </ul>
+      <div class="edu-block edu-block--logo">
+        <div class="org-logo"><img src="assets/logos/northstar.png" alt="NorthStar Earth &amp; Space logo"></div>
+        <div class="edu-block__body">
+          <h3>Orbital Dynamics Specialist – Space Domain Awareness &amp; Orbit Determination</h3>
+          <p>NorthStar Earth &amp; Space, Montreal, QC &mdash; Sep 2026 – Present &middot; Orbital Dynamics (OD) team</p>
+          <ul>
+            <li>Monitor <strong>Space Domain Awareness (SDA)</strong> activities and NorthStar's <strong>orbit determination</strong> infrastructure during operational shifts, responding to customer needs and operational tasking requests.</li>
+            <li>Provide astrodynamics and SDA expertise to support ongoing customer operations, using NorthStar's astrodynamics and analysis tools and building ad hoc scripts and methods when a fast, agile response is needed.</li>
+            <li>Contribute to the NorthStar product development lifecycle by feeding back lessons learned and customer operational needs.</li>
+            <li>Report results, progress and compliance internally and to customers.</li>
+          </ul>
+        </div>
       </div>
-      <div class="edu-block">
-        <h3>Software &amp; Data Engineering Intern – Dynamic Satellite Database for Space Surveillance</h3>
-        <p>ONERA (French Aerospace Lab), Palaiseau, France &mdash; Jun 2024 – Aug 2024</p>
-        <ul>
-          <li>Built <strong>OBELIX</strong>, a Python ETL (extract–transform–load) pipeline supporting ONERA's space-surveillance work, aggregating data on satellites and orbiting objects from several heterogeneous sources: Gunter's Space Page (web scraping with BeautifulSoup), the UCS satellite catalogue, Two-Line Element (TLE) sets from Space-Track and McCants, and DORIS (CNES) COSPAR identifiers.</li>
-          <li>Processed the TLE sets with Skyfield to derive orbital parameters and classify each object's orbit using ESA terminology (LEO, MEO, GEO, SSO, GTO, HEO, VLEO…), including sun-synchronous-orbit detection via J2 nodal precession and conversion of NORAD Alpha-5 identifiers.</li>
-          <li>Centralised the data in a MongoDB database built on a hub-and-spoke model around a pivot <em>Satellite</em> collection (keyed by NORAD / COSPAR), with deduplication and integrity checks that flag identifier conflicts and retain only the most recent TLE per object.</li>
-          <li>Exposed the catalogue through a FastAPI REST API offering list and per-field queries, whitelisted field updates, and a custom query language with comparison operators, sorting and result limits translated into MongoDB queries.</li>
-          <li>Documented the schema, scripts and procedures so the system could be maintained and extended by the team.</li>
-        </ul>
+      <div class="edu-block edu-block--logo">
+        <div class="org-logo"><img src="assets/logos/nus.png" alt="NUS logo"></div>
+        <div class="edu-block__body">
+          <h3>Research Engineering Intern – Deep Learning for Ionospheric Scintillation Mitigation in SAR Imagery</h3>
+          <p>National University of Singapore (NUS), Singapore &mdash; Jan 2026 – Aug 2026</p>
+          <ul>
+            <li>Developed the deep-learning component of <strong>BubbleNet</strong>, a physics-informed research project restoring L-band SAR imagery (e.g. ALOS/PALSAR) degraded by ionospheric scintillation — targeting a submission to ISAP 2026.</li>
+            <li>Designed and adapted a <strong>complex-valued neural network (CVNN)</strong> predicting the scintillation indices S4 (intensity) and σφ (phase) from complex SAR signal representations, extending it from single-output to multi-input, dual-output regression.</li>
+            <li>Built a physics-informed pipeline coupling deep learning with a phase-screen model (Carrano et al., 2012): CVNN index prediction → analytic regeneration of the ionospheric transfer function → U-Net image denoiser, validating each stage against synthetic physical ground truth.</li>
+            <li>Engineered the data and training stack in PyTorch (native complex tensors): refactored complex-valued HDF5 inputs, built a precompute step caching ~5 GB in RAM for ~5× faster training, and extended losses and per-output metrics (R², RMSE, MAE); ran experiments on a PBS HPC cluster (CPU/GPU, A40).</li>
+            <li>Reached R² = 0.980 (RMSE = 0.020) on S4 prediction, outperforming random-forest and real-valued network baselines; authored the project's technical documentation and coordinated the data interface with the physics team.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="edu-block edu-block--logo">
+        <div class="org-logo"><img src="assets/logos/onera.png" alt="ONERA logo"></div>
+        <div class="edu-block__body">
+          <h3>Software &amp; Data Engineering Intern – Dynamic Satellite Database for Space Surveillance</h3>
+          <p>ONERA (French Aerospace Lab), Palaiseau, France &mdash; Jun 2024 – Aug 2024</p>
+          <ul>
+            <li>Built <strong>OBELIX</strong>, a Python ETL (extract–transform–load) pipeline supporting ONERA's space-surveillance work, aggregating data on satellites and orbiting objects from several heterogeneous sources: Gunter's Space Page (web scraping with BeautifulSoup), the UCS satellite catalogue, Two-Line Element (TLE) sets from Space-Track and McCants, and DORIS (CNES) COSPAR identifiers.</li>
+            <li>Processed the TLE sets with Skyfield to derive orbital parameters and classify each object's orbit using ESA terminology (LEO, MEO, GEO, SSO, GTO, HEO, VLEO…), including sun-synchronous-orbit detection via J2 nodal precession and conversion of NORAD Alpha-5 identifiers.</li>
+            <li>Centralised the data in a MongoDB database built on a hub-and-spoke model around a pivot <em>Satellite</em> collection (keyed by NORAD / COSPAR), with deduplication and integrity checks that flag identifier conflicts and retain only the most recent TLE per object.</li>
+            <li>Exposed the catalogue through a FastAPI REST API offering list and per-field queries, whitelisted field updates, and a custom query language with comparison operators, sorting and result limits translated into MongoDB queries.</li>
+            <li>Documented the schema, scripts and procedures so the system could be maintained and extended by the team.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="card">
       <h2>Education</h2>
-      <div class="edu-block">
-        <h3>Master of Engineering – Aerospace Engineering</h3>
-        <p>Concordia University, Montreal, QC &mdash; 2024–2026 &middot; Specialisation: Space, Launchers &amp; Satellites</p>
+      <div class="edu-block edu-block--logo">
+        <div class="org-logo"><img src="assets/logos/concordia.svg" alt="Concordia University logo"></div>
+        <div class="edu-block__body">
+          <h3>Master of Engineering – Aerospace Engineering</h3>
+          <p>Concordia University, Montreal, QC &mdash; 2024–2026 &middot; Specialisation: Space, Launchers &amp; Satellites</p>
+        </div>
       </div>
-      <div class="edu-block">
-        <h3>Aerospace Engineering Degree (Diplôme d'Ingénieur Aérospatial)</h3>
-        <p>Institut Polytechnique des Sciences Avancées (IPSA), Paris, France &mdash; 2022–2026 &middot; Specialisation: Space, Launchers &amp; Satellites</p>
+      <div class="edu-block edu-block--logo">
+        <div class="org-logo"><img src="assets/logos/ipsa.png" alt="IPSA logo"></div>
+        <div class="edu-block__body">
+          <h3>Aerospace Engineering Degree (Diplôme d'Ingénieur Aérospatial)</h3>
+          <p>Institut Polytechnique des Sciences Avancées (IPSA), Paris, France &mdash; 2022–2026 &middot; Specialisation: Space, Launchers &amp; Satellites</p>
+        </div>
       </div>
-      <div class="edu-block">
-        <h3>Exchange Semester</h3>
-        <p>Universiti Sains Malaysia, Penang, Malaysia &mdash; Oct 2023 – Mar 2024</p>
+      <div class="edu-block edu-block--logo">
+        <div class="org-logo"><img src="assets/logos/usm.png" alt="Universiti Sains Malaysia logo"></div>
+        <div class="edu-block__body">
+          <h3>Exchange Semester</h3>
+          <p>Universiti Sains Malaysia, Penang, Malaysia &mdash; Oct 2023 – Mar 2024</p>
+        </div>
       </div>
     </section>
 
